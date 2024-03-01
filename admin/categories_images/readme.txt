@@ -1,0 +1,1 @@
+to jest ai generated, po za ciastkiem z minecrafta <3

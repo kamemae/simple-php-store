@@ -16,7 +16,7 @@ if (isset($_FILES['newImg']) && isset($_POST['newNam'])) {
     $extension = explode('.', $filename);
     $extension = end($extension);
 
-    $allowedExtensions = array('png', 'jpeg', 'jpg', 'gif');
+    $allowedExtensions = array('png', 'jpeg', 'jpg', 'gif', 'webp');
     if(in_array($extension, $allowedExtensions)) {
         $timestamp = time();
         $hashName = md5($timestamp . $filename);

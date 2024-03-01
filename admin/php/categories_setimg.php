@@ -1,7 +1,7 @@
 <?php
 include 'database_connection.php';
 
-//czy admin
+//adam to ty?
 $result = $connect->query("SELECT user_admin FROM user WHERE user_id = '{$_SESSION['id']}'");
 $row = $result->fetch_assoc();
 if (!$row['user_admin']) {
@@ -10,15 +10,12 @@ if (!$row['user_admin']) {
 }
 
 if (isset($_FILES['newImg'])) {
-
-    //UPDATE `category` SET `category_image` = 'despacito' WHERE `category`.`category_id` = 24;
     $filename = strtolower($_FILES['newImg']['name']);
-
-    $extension = explode('.', $filename);
-    $extension = end($extension);
-
+    
+    $extension = pathinfo($filename, PATHINFO_EXTENSION);
     $allowedExtensions = array('png', 'jpeg', 'jpg', 'gif');
-    if(in_array($extension, $allowedExtensions)) {
+
+    if (in_array($extension, $allowedExtensions)) {
         $timestamp = time();
         $hashName = md5($timestamp . $filename);
         $hash = "{$hashName}.{$extension}";
@@ -28,13 +25,14 @@ if (isset($_FILES['newImg'])) {
         
         list($width, $height) = getimagesize($uploadFolder . $hash);    
 
-        if($width == $height) {
-            $sql = "SELECT category_image FROM category where category_id = {$_GET['category']}";
-            unlink($uploadFolder . $sql);
-
-            $sql = "UPDATE category SET category_image = '{$hash}' WHERE category_id = {$_GET['category']};";
+        if ($width > 0 && $height > 0) {
+            $category_id = mysqli_real_escape_string($connect, $_GET['category']);
+            $result = $connect->query("SELECT category_image FROM category WHERE category_id = {$category_id}");
+            $row = $result->fetch_assoc();
+            $currentImage = $row['category_image'];
+            $sql = "UPDATE category SET category_image = '{$hash}' WHERE category_id = {$category_id}";
             mysqli_query($connect, $sql);
-
+            if (!empty($currentImage)) { unlink($uploadFolder . $currentImage); }
             header("Location: ../redirect.php?catimg");
             exit();
         } else {
@@ -44,4 +42,6 @@ if (isset($_FILES['newImg'])) {
         }
     }
 }
+
+//tu mi kod poprawił chatgpt taka dobra mordka
 ?>
