@@ -17,3 +17,12 @@ HTML, CSS, JS, PHP, JQuery, ChatGPT
 ## Wogole uploadowanie dziala fajnie giga super
 dzieki chatgpt jeszcze raz bo mi sie nie chcialo tego poprawiac
 
+## TODO
+  - Zmiana Grafiki Produktu
+	- Dodawanie Produktu
+	- Płatność
+	- Panel Zamówień
+	- Rejestracja
+	- Zapomniałem hasła
+	- Koszyk 💀
+	- Podglad Zamowienia
