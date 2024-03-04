@@ -1,6 +1,6 @@
 <?php
     include "../php/database_connection.php";
-
+    include "../php/database_pdo.php";
     //czy admin
     $result = $connect->query("SELECT user_admin FROM user WHERE user_id = '{$_SESSION['id']}'");
     $row = $result->fetch_assoc();
@@ -11,10 +11,10 @@
 
 
     $newPrice = filter_input(INPUT_POST, 'newPrice', FILTER_VALIDATE_FLOAT);
-    if($newPrice !== false) {
+    if($newPrice != false && $newPrice >= 0) {
         $productID = $_GET['product'];
     
-        $pdo = new PDO("mysql:host=localhost;dbname=piekarnia", "root", "");
+
         $sql = 'UPDATE product SET product_price = :newPrice WHERE product_id = :productID';
     
         $stmt = $pdo->prepare($sql);

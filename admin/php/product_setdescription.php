@@ -10,9 +10,12 @@
         exit();
     }
 
+    if(empty($_POST['newDesc'])) {
+        header("Location: ../redirect.php?products={$_GET['product']}");
+    }
+
     $newDesc = isset($_POST['newDesc']) ? htmlspecialchars($_POST['newDesc'], ENT_QUOTES, 'UTF-8') : '';
     $productID = isset($_GET['product']) ? intval($_GET['product']) : 0;
-
     $sql = "UPDATE product SET product_description = :newDesc WHERE product_id = :productID";
 
     $stmt = $pdo->prepare($sql);

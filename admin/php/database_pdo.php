@@ -1,3 +1,4 @@
 <?php
-    $pdo = new PDO("mysql:host=localhost;dbname=piekarnia", "root", "");
+    include "../getdb.php";
+    $pdo = new PDO("mysql:host=$servername;dbname=$databasename", $username, $password);
 ?>

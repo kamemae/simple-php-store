@@ -90,28 +90,25 @@
                 ";
             } else if(isset($_GET['addProduct'])) {
                 echo "
-                    <center><p>Dodawanie Produktu</p></center>
+                    <center><h4>Dodawanie Produktu</h4></center>
+                    <p>Musisz dodać cztery obrazy<br>Zdjęcie musi być kwadratem!</p>
                     <div class='row'>
-                        <form method='POST' action='#'>
+                        <form method='POST' action='../admin/php/product_add.php' enctype='multipart/form-data'>
                             <input type='text' name='newNam' maxlenght='128' style='width: 250px; height: 25px;' placeholder='Nazwa Produktu' required><br>
                             <input type='text' name='newDesc' style='width: 250px; height: 25px;' placeholder='Opis Produktu' required><br>
-                            <input type='text' name='newPrice' style='width: 250px; height: 25px;' placeholder='Cena Produktu'><br><br>
+                            <input type='text' name='newPrice' style='width: 250px; height: 25px;' placeholder='Cena Produktu' required><br><br>
                             <p>Zdjęcia</p>
-                            <input type='file' name='newImg' style='width: 270px; height: 25px; border: none' required><br>
-                            <input type='file' name='newImg' style='width: 270px; height: 25px; border: none' required><br>
-                            <input type='file' name='newImg' style='width: 270px; height: 25px; border: none' required><br>
-                            <input type='file' name='newImg' style='width: 270px; height: 25px; border: none' required><br>
+                            <input type='file' name='newImg1' style='width: 270px; height: 25px; border: none' required><br>
+                            <input type='file' name='newImg2' style='width: 270px; height: 25px; border: none' required><br>
+                            <input type='file' name='newImg3' style='width: 270px; height: 25px; border: none' required><br>
+                            <input type='file' name='newImg4' style='width: 270px; height: 25px; border: none' required><br>
                             <input type='submit' class='btn' style='width: 95%;' value='Dodaj Produkt'>
                         </form>
                     </div><br><br><br>
                 ";
             }
-            
-
-
         ?>
     </center>
-
     <?php include "../php/load_footer.php"; ?>
 </body>
 </html>

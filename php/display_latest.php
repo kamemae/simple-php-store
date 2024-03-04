@@ -11,7 +11,7 @@
             if (is_null($row["product_image_1"])) {
                 echo "<img src='../images/noImage.png' alt='Brak Ustawionego Obrazu'>";
             } else {
-                echo "<img src='../public/category_images/{$row["product_image_1"]} alt='{$row["product_name"]}'>";
+                echo "<img src='../admin/product_images/{$row["product_image_1"]}' alt='{$row["product_name"]}'>";
             }
             echo "<h4>{$row["product_name"]}</h4><p>{$row["product_price"]} PLN</p></a></div>";
         }

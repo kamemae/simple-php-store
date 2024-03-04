@@ -1,10 +1,7 @@
 <?php
   session_start();
 
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $databasename = "piekarnia";
+  include "../getdb.php";
 
   $connect = new mysqli($servername, $username, $password, $databasename);
   if ($connect->connect_error) {

@@ -18,25 +18,25 @@ if(isset($_GET['product'])) {
             if(is_null($row['product_image_1'])) {
                 echo "<div class='small-img-col'><img src='../images/noImage.png' alt='' width='100%' class='smallimg'></div>";
             } else {
-                echo "<div class='small-img-col'><img src='../images/{$row['product_image_1']}' alt='' width='100%' class='smallimg'></div>";
+                echo "<div class='small-img-col'><img src='../admin/product_images/{$row['product_image_1']}' alt='' width='100%' class='smallimg'></div>";
             }
 
             if(is_null($row['product_image_2'])) {
                 echo "<div class='small-img-col'><img src='../images/noImage.png' alt='' width='100%' class='smallimg'></div>";
             } else {
-                echo "<div class='small-img-col'><img src='../images/{$row['product_image_2']}' alt='' width='100%' class='smallimg'></div>";
+                echo "<div class='small-img-col'><img src='../admin/product_images/{$row['product_image_2']}' alt='' width='100%' class='smallimg'></div>";
             }
 
             if(is_null($row['product_image_3'])) {
                 echo "<div class='small-img-col'><img src='../images/noImage.png' alt='' width='100%' class='smallimg'></div>";
             } else {
-                echo "<div class='small-img-col'><img src='../images/{$row['product_image_3']}' alt='' width='100%' class='smallimg'></div>";
+                echo "<div class='small-img-col'><img src='../admin/product_images/{$row['product_image_3']}' alt='' width='100%' class='smallimg'></div>";
             }
 
             if(is_null($row['product_image_4'])) {
                 echo "<div class='small-img-col'><img src='../images/noImage.png' alt='' width='100%' class='smallimg'></div>";
             } else {
-                echo "<div class='small-img-col'><img src='../images/{$row['product_image_4']}' alt='' width='100%' class='smallimg'></div>";
+                echo "<div class='small-img-col'><img src='../admin/product_images/{$row['product_image_4']}' alt='' width='100%' class='smallimg'></div>";
             }
             echo "</div></div>
                 <div class='col-2'>
