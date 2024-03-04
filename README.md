@@ -19,7 +19,6 @@ dzieki chatgpt jeszcze raz bo mi sie nie chcialo tego poprawiac
 
 ## TODO
   - Zmiana Grafiki Produktu
-	- Dodawanie Produktu
 	- Płatność
 	- Panel Zamówień
 	- Rejestracja
