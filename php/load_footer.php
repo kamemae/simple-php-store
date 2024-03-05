@@ -27,22 +27,22 @@
                         <h3>Sprawdź nasze social media</h3>
                         <ul>
                             <li>
-                                <a href='https:/\/\twitter.com/makawoon'><i class='fa-brands fa-x-twitter'></i> Twitter</a>
+                                <a href='https:twitter.com/makawoon'><i class='fa-brands fa-x-twitter'></i> Twitter</a>
                             </li>
                             <li>
-                                <a href='https:/\/\www.instagram.com/makaronokok/'><i class='fa-brands fa-instagram'></i>
+                                <a href='https:www.instagram.com/makaronokok/'><i class='fa-brands fa-instagram'></i>
                                     Instagram</a>
                             </li>
                             <li>
-                                <a href='https:/\/\www.facebook.com/groups/533989907843913'><i
+                                <a href='https:www.facebook.com/groups/533989907843913'><i
                                         class='fa-brands fa-facebook'></i> Facebook</a>
                             </li>
                             <li>
-                                <a href='https:/\/\www.youtube.com/watch?v=dQw4w9WgXcQ'><i class='fa-brands fa-youtube'></i>
+                                <a href='https:www.youtube.com/watch?v=dQw4w9WgXcQ'><i class='fa-brands fa-youtube'></i>
                                     YouTube</a>
                             </li>
                             <li>
-                                <a href='https:/\/\www.tiktok.com/pl-PL/'><i class='fa-brands fa-tiktok'></i> TikTok</a>
+                                <a href='https://www.tiktok.com/@tojamakaron'><i class='fa-brands fa-tiktok'></i> TikTok</a>
                             </li>
                         </ul>
                     </div>

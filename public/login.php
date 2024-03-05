@@ -19,22 +19,18 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="../js/toggler.js" defer></script>
 </head>
-
 <body>
     <?php include "../php/load_header.php"; ?>
    <div class="account-page">
         <div class="container">
             <div class="row">
-                <div class="col-2">
-                    <img src="../images/baker.png" alt="" width="100%">
-                </div>
+                <div class="col-2"><img src="../images/baker.png" alt="" width="100%"></div>
                 <div class="col-2">
                     <div class="form-container">
                         <div class="form-btn">
                             <span onclick="login()">Rejestracja</span>
                             <span onclick="register()">Logowanie</span>
                             <hr id="indicator">
-
                             <form action="../php/user_login.php" method="POST" id="login">
                             <?php include "../php/login_error.php"; ?>
                                 <input type="text" name="name" id="" placeholder="Nazwa Użytkownika" required>
@@ -42,7 +38,6 @@
                                 <input type="submit" class="btn" value="Zaloguj się">
                                 <a href="#">Nie pamiętam hasła</a>
                             </form>
-
                             <form action="../php/user_register.php" id="register">
                                 <input type="text" name="" id="" placeholder="Nazwa Użytkownika" required>
                                 <input type="email" name="" id="" placeholder="E-Mail" required>

@@ -13,19 +13,11 @@
 
 <body>
     <?php include "../php/load_header.php"; ?>
-    <br />
-
+    <br>
     <div class="small-container">
-        <div class="row row-2">
-            <h2>Wszystie produkty</h2>
-        </div>
-        <div class="row elements">
-                <?php include "../php/display_products.php"; ?>
-        </div>
+        <div class="row row-2"><h2>Wszystie produkty</h2></div>
+        <div class="row elements"><?php include "../php/display_products.php"; ?></div>
     </div>
-
-    
-
     <?php include "../php/load_footer.php"; ?>
 </body>
 

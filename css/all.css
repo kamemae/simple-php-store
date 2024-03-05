@@ -317,7 +317,7 @@ select:focus {
   margin-top: 20px;
 }
 .single-product input {
-  width: 60px;
+  width: 100px;
   height: 40px;
   padding-left: 10px;
   font-size: 20px;
@@ -390,6 +390,8 @@ td img {
 }
 
 .total {
+  padding-top: 50px;
+  padding-bottom: 200px;
   display: flex;
   justify-content: flex-end;
 }
@@ -480,6 +482,22 @@ form a {
 
 .error_msg {
   color: rgb(182, 18, 18);
+}
+
+.minus {
+  color: rgb(182, 18, 18);
+  cursor: pointer;
+}
+.minus:hover {
+  color: rgb(100, 7, 7);
+}
+
+.plus {
+  color: rgb(10, 145, 17);
+  cursor: pointer;
+}
+.plus:hover {
+  color: rgb(5, 78, 8);
 }
 
 

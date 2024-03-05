@@ -19,6 +19,7 @@
         include "../php/load_header.php";
         include "../php/landing_product.php";
         include "../admin/php/landing_admin.php"; #grafike zrobic trzeba
-        include "../php/load_footer.php"; ?>
+        include "../php/load_footer.php"; 
+    ?>
 </body>
 </html>
