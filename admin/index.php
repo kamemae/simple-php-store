@@ -62,7 +62,7 @@
                     <div class="col-3">
                         <a href='?addCategory' class='btn'>Dodaj Kategorie</a>
                         <a href='?addProduct' class='btn'>Dodaj Produkt</a>
-                        <a href='#' class='btn'>Użytkownicy</a>
+                        <a href='?menageUsers' class='btn'>Użytkownicy</a>
                     </div>
                 </div>
             </div>
@@ -107,6 +107,14 @@
                         </form>
                     </div><br><br><br>
                 ";
+            } else if(isset($_GET['menageUsers'])) {
+                echo "<table><thead><tr class='menageUsersTrow'><th>id.</th><th>Nazwa Uzytkownika</th><th>Email</th><th class='menageUsersLast'>Administrator</th></tr></thead>
+                <tbody>";
+                    include "../admin/php/users_display.php";
+                echo "
+                   </tbody>
+                </table>
+            ";
             }
         ?>
     </center>

@@ -56,6 +56,4 @@
 
         $connect->close();
         exit();
-
-
 ?>
