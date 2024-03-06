@@ -1,5 +1,5 @@
 <?php
-    if ($result = $connect->query("SELECT * FROM product limit 4;")) {
+    if ($result = $connect->query("SELECT DISTINCT * FROM product order by rand() limit 4;")) {
         while ($row = $result->fetch_assoc()) {
             echo " <div class='col-4'>
                 <a href='../public/landing.php?product={$row["product_id"]}'>

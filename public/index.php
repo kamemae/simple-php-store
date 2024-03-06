@@ -24,7 +24,7 @@
         </div>
     </header>
     <br>
-    <div class="small-container"><h2 class="title">Polecane Produkty</h2>
+    <div class="small-container"><h2 class="title">Losowe Produkty</h2>
         <div class="row"> <?php include "../php/display_featured.php"; ?></div>
         <br><h2 class="title">Najnowsze Produkty</h2>
         <div class="row"><?php include "../php/display_latest.php"; ?></div>

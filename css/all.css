@@ -346,6 +346,8 @@ input:focus {
 }
 
 .cart-page {
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin: 80px auto;
 }
 
@@ -389,9 +391,21 @@ td img {
   margin-right: 10px;
 }
 
+
+.recipt table {
+  width: 100%;
+  max-width: 500px;
+}
+.recipt td:last-child {
+  text-align: right;
+}
+.recipt th {
+  text-align: right;
+}
+
 .total {
-  padding-top: 50px;
-  padding-bottom: 200px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   display: flex;
   justify-content: flex-end;
 }
@@ -500,7 +514,18 @@ form a {
   color: rgb(5, 78, 8);
 }
 
+.incart {
+  padding-top: 200px;
+  padding-bottom: 110px;
+  color: #00000056;
+}
 
+.orderContainer {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  max-width: 600px;
+  margin: auto;
+}
 
 
 @media (width <= 1000px) {

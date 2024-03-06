@@ -38,19 +38,26 @@
                         echo $row['cart_quantity']*$row['product_price'];
                         echo "PLN </td></tr>";
                     }
-                    echo "</table><div class='total'><table><tr><td>Koszyk</td><td>$total PLN</td></tr>";
-                    echo "<tr><td>Dostawa</td><td>14.99 PLN</td> </tr>";
-                    $total += 14.99;
-                    $tmpTotal = $total;
-                    $tmpTotal -= intval($total);
-                    if($tmpTotal < 0.1) $total = $total."0";
-                    echo "<tr><td>Całość</td><td>$total PLN</td></tr></table></div>";
-                } else echo "</table><center>Pusty koszyk bratku</center>";
+                    echo "</table><div class='total' id='total'><table><tr><td>Koszyk</td><td>$total PLN</td></tr>";
+                    echo "<tr><td>Dostawa</td><td><select id='product'>";
+
+                    $deliveryQuery = "SELECT * from suppliers ORDER BY +suppliers_price";
+                    $deliveryStmt = $connect->prepare($deliveryQuery);
+                    $deliveryStmt->execute();
+                    $deliveryResult = $deliveryStmt->get_result();
+                    while($row = $deliveryResult->fetch_assoc()) echo "<option value='{$row['suppliers_id']}'>{$row['suppliers_name']} (+{$row['suppliers_price']} PLN)</option>";
+
+                    echo "</select></td></tr>";
+                    echo "<tr><td>Całość</td><td> {$total} PLN</td></tr></table></div><form action='#' method='POST'><input type='submit' class='btn' value='Przejdź do Kasy' style='max-width: 500px; float: right'></form>
+
+                    ";
+                } else echo "</table><center><h1 class='incart'>Koszyk jest Pusty <i class='fa-regular fa-face-sad-tear'></i></h1></center>";
 
                 $cartResult->close();
                 $cartStmt->close();
             ?>
     </div>
+
     <?php include "../php/load_footer.php"; ?>
 </body>
 </html>
