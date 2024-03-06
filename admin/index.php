@@ -62,6 +62,7 @@
                     <div class="col-3">
                         <a href='?addCategory' class='btn'>Dodaj Kategorie</a>
                         <a href='?addProduct' class='btn'>Dodaj Produkt</a>
+                        <a href='#' class='btn'>Użytkownicy</a>
                     </div>
                 </div>
             </div>

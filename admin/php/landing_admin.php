@@ -13,7 +13,7 @@ if (isset($_SESSION["id"])) {
                     <a href='?product={$_GET["product"]}&q=desc' class='btn'>Zmień Opis</a>
                     <a href='?product={$_GET["product"]}&q=cat' class='btn'>Kategorie</a>
                     <a href='?product={$_GET["product"]}&q=sale' class='btn'>Zmień Zniżkę</a>
-                    <a href='../admin/php/image_change.php?product={$_GET["product"]}' class='btn'>Zmień Grafikę</a>
+                    <a href='?product={$_GET["product"]}&q=image' class='btn'>Zmień Grafikę</a>
                     <a href='../admin/php/product_remove.php?product={$_GET["product"]}' class='btn'>Usuń</a>
                 </div>  
             </center>";
@@ -50,8 +50,7 @@ if (isset($_SESSION["id"])) {
                     </div><br><br><br>";
                     break;
                 case "cat":
-                    echo "<div><div><center><p>Dodaj do kategorii</p></center><div class='row'><form method='POST' action='../admin/php/categories_set.php?product={$_GET["product"]}'>
-                        <select name='add'>";
+                    echo "<div><div><center><p>Dodaj do kategorii</p></center><div class='row'><form method='POST' action='../admin/php/categories_set.php?product={$_GET["product"]}'><select name='add'>";
                     $result = $connect->query("SELECT category_id, category_name FROM category");
                     if ($result->num_rows > 0) while ($row = $result->fetch_assoc()) echo "<option value='{$row["category_id"]}'>{$row["category_name"]}</option>";
                     echo "</select><input type='submit' style='width: 30px; height: 25px;' value='➫'></form></div></div><br><br>
@@ -74,6 +73,51 @@ if (isset($_SESSION["id"])) {
                             </form>
                         </div><br><br><br>
                     ";
+                    break;
+                case "image":
+                    $result = $connect->query("SELECT * FROM product");
+                    $result->fetch_assoc();
+                    echo "<center><p>Zmiana Grafiki</p></center><br><center>";
+
+                    if(!is_null($row['product_image_1'])) echo "<img class='smallimg' src='../admin/product_images/{$row['product_image_1']}' width='200px'>";
+                    else echo "<img class='smallimg' src='../images/noImage.png' width='200px'>";
+                    echo "
+                        <form method='POST' action='../admin/php/product_setimage.php?select=1&product={$row['product_id']}' enctype='multipart/form-data'>
+                            <input type='file' name='img' style='width: 270px; height: 25px; border: none' required><br>
+                            <input type='hidden' name='{$row['product_image_1']}'>
+                            <input type='submit' value='Ustaw' class='btn' style='max-width: 100px'>
+                        </form><hr style='max-width: 300px'><br>
+                    ";
+
+                    if(!is_null($row['product_image_2'])) echo "<img class='smallimg' src='../admin/product_images/{$row['product_image_2']}' width='200px'>";
+                    else echo "<img class='smallimg' src='../images/noImage.png' width='200px'>";
+                    echo "
+                    <form method='POST' action='../admin/php/product_setimage.php?select=2&product={$row['product_id']}' enctype='multipart/form-data'>
+                            <input type='file' name='img' style='width: 270px; height: 25px; border: none' required><br>
+                            <input type='hidden' name='{$row['product_image_2']}'>
+                            <input type='submit' value='Ustaw' class='btn' style='max-width: 100px'>
+                        </form><hr style='max-width: 300px'><br>
+                    ";
+
+                    if(!is_null($row['product_image_3'])) echo "<img class='smallimg' src='../admin/product_images/{$row['product_image_3']}' width='200px'>";
+                    else echo "<img class='smallimg' src='../images/noImage.png' width='200px'>";
+                    echo "
+                    <form method='POST' action='../admin/php/product_setimage.php?select=3&product={$row['product_id']}' enctype='multipart/form-data'>
+                            <input type='file' name='img' style='width: 270px; height: 25px; border: none' required><br>
+                            <input type='hidden' name='{$row['product_image_3']}'>
+                            <input type='submit' value='Ustaw' class='btn' style='max-width: 100px'>
+                        </form><hr style='max-width: 300px'><br>
+                    ";
+
+                    if(!is_null($row['product_image_4'])) echo "<img class='smallimg' src='../admin/product_images/{$row['product_image_4']}' width='200px'>";
+                    else echo "<img class='smallimg' src='../images/noImage.png' width='200px'>";
+                    echo "
+                    <form method='POST' action='../admin/php/product_setimage.php?select=4&product={$row['product_id']}' enctype='multipart/form-data'>
+                            <input type='file' name='img' style='width: 270px; height: 25px; border: none' required><br>
+                            <input type='hidden' name='{$row['product_image_4']}'>
+                            <input type='submit' value='Ustaw' class='btn' style='max-width: 100px'>
+                        </form><hr style='max-width: 300px'><br>
+                    </div></center><br><br><br>";
                     break;
                 default:
                     break;

@@ -376,11 +376,11 @@ td input {
   padding: 5px;
 }
 td a {
-  color: #ff0000;
+  color: #aa0000;
   transition: 250ms;
 }
 td a:hover {
-  color: #940000;
+  color: #4d0000;
   transition: 250ms;
 }
 td img {

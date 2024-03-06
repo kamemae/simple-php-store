@@ -32,7 +32,7 @@
                         echo "<tr><td><div class='cart-info'> <a href='../public/landing.php?product={$row['product_id']}'>";
                         if($row['product_image_1'] != null) echo "<img src='../admin/product_images/{$row['product_image_1']}' alt='{$row['product_name']}'>";
                         else echo "<img src='../images/noImage.png' alt='{$row['product_name']}'>";
-                        echo "<div><p>{$row['product_name']}</p><small>{$row['product_price']} PLN / szt.</small><br><br><a href='../php/cart_remove.php?product={$row['product_id']}'>Usuń</a></div></a></div></td><td>
+                        echo "<div><p>{$row['product_name']}</p><small>{$row['product_price']} PLN / szt.</small><br><br><a href='../php/cart_remove.php?product={$row['product_id']}'><i class='fa-solid fa-trash'></i></a></div></a></div></td><td>
                             <a class='minus fa-regular fa-square-minus' href='../php/cart_remove.php?productRem={$row['product_id']}'></a> {$row['cart_quantity']} szt. <a class='plus fa-regular fa-square-plus' href='../php/cart_add.php?product={$row['product_id']}'></a></td><td></td><td>";
                         $total += $row['cart_quantity']*$row['product_price'];
                         echo $row['cart_quantity']*$row['product_price'];
