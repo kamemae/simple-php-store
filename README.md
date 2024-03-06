@@ -23,4 +23,3 @@ dzieki chatgpt jeszcze raz bo mi sie nie chcialo tego poprawiac
 - Rejestracja
 - Zapomniałem hasła
 - Podglad Zamowienia
-- Uzytkownicy
