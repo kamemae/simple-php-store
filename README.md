@@ -18,8 +18,7 @@ HTML, CSS, JS, PHP, JQuery, ChatGPT
 dzieki chatgpt jeszcze raz bo mi sie nie chcialo tego poprawiac
 
 ## TODO
-- Płatność
 - Panel Zamówień
 - Rejestracja
-- Zapomniałem hasła
 - Podglad Zamowienia
+- Dodawanie wlasnego gangu kurierow
