@@ -19,3 +19,6 @@ dzieki chatgpt jeszcze raz bo mi sie nie chcialo tego poprawiac
 
 ## TODO
 - Dodawanie wlasnego gangu kurierow
+
+## I DID THAT
+I mean i did that, but i dont remember where i have files for this shit tho
